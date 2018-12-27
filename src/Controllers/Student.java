@@ -10,6 +10,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import java.io.IOException;
 import java.sql.Connection;
@@ -19,7 +20,7 @@ import java.sql.Statement;
 public class Student {
     Connection con = DataBaseConnection.getConnection();
 
-    @FXML public TableView tableStd;
+    @FXML public TableView<SCT> tableStd;
 
     @FXML
     public void ChangePass (ActionEvent event) throws IOException {
@@ -40,35 +41,34 @@ public class Student {
         S.setTitle("Regist Course");
         S.show();
     }
-
+    @FXML
     public void viewCourseS(ActionEvent event)throws Exception{
-        String sid=DataBaseConnection.ID;
+        String stid=DataBaseConnection.ID;
         tableStd.getItems().clear();
         tableStd.getColumns().clear();
-        TableColumn c1=new TableColumn("CID");
-        TableColumn c2=new TableColumn("Course Name");
-        TableColumn c3=new TableColumn("Number Of credits");
-        TableColumn c4=new TableColumn("Teacher Name");
-        tableStd.getColumns().addAll(c1,c2,c3,c4);
-        ObservableList<ObservableList> data= FXCollections.observableArrayList();
+        TableColumn cidCol=new TableColumn("cid");
+        TableColumn cnameCol=new TableColumn("Crs Name");
+        TableColumn tnameCol=new TableColumn("Tch Name");
+        TableColumn nbCol=new TableColumn("nb_credits");
+        cidCol.setCellValueFactory(new PropertyValueFactory<SCT,String>("cid"));
+        cnameCol.setCellValueFactory(new PropertyValueFactory<SCT,String>("cname"));
+        tnameCol.setCellValueFactory(new PropertyValueFactory<SCT,String>("tname"));
+        nbCol.setCellValueFactory(new PropertyValueFactory<SCT,String>("nb_credits"));
+
+        ObservableList<SCT> data= FXCollections.observableArrayList();
         String cid,nb_credits;
-        String cname,tname;
-        String query="select cid , cname,nb_credits,tname from sct where sid = "+sid;
+        String sname,sid,cname,tname;
+        String query="select * from sct where sid = "+stid;
         try{
             Statement statement = con.createStatement();
             ResultSet resultSet =statement.executeQuery(query);
             try{
                 while(resultSet.next()){
-                    cid=resultSet.getString("cid");
-                    cname=resultSet.getString("cname");
-                    nb_credits=resultSet.getString("nb_credits");
-                    tname=resultSet.getString("tname");
-                    ObservableList<String> row = FXCollections.observableArrayList();
-                    for(int i=1 ; i<=resultSet.getMetaData().getColumnCount(); i++){
-                        row.add(resultSet.getString(i));
-                    }
-                    tableStd.setItems(data);
+                    SCT row=new SCT(resultSet.getString("sid"),resultSet.getString("cid"),resultSet.getString("cname"),resultSet.getString("sname"),resultSet.getString("tid"),resultSet.getString("tname"),resultSet.getString("nb_credits"));
+                    data.add(row);
                 }
+                tableStd.setItems(data);
+                tableStd.getColumns().addAll(cidCol,cnameCol,tnameCol,nbCol);
 
             }catch (Exception e){
                 e.printStackTrace();
@@ -80,30 +80,32 @@ public class Student {
 
     }
     @FXML
-    public void viewTeacherS(ActionEvent event)throws Exception{
-        String sid=DataBaseConnection.ID;
+    public void viewTeacherS(ActionEvent event)throws Exception {
+        String stid=DataBaseConnection.ID;
         tableStd.getItems().clear();
         tableStd.getColumns().clear();
-        TableColumn c1=new TableColumn("My Teachers");
-        tableStd.getColumns().addAll(c1);
-        ObservableList<ObservableList> data= FXCollections.observableArrayList();
+        TableColumn tidCol=new TableColumn("tid");
 
-        String tname;
-        String query="select tname from sct where sid = "+sid;
+        TableColumn tnameCol=new TableColumn("Tch Name");
+
+
+        tnameCol.setCellValueFactory(new PropertyValueFactory<SCT,String>("tname"));
+        tidCol.setCellValueFactory(new PropertyValueFactory<SCT,String>("tid"));
+
+        ObservableList<SCT> data= FXCollections.observableArrayList();
+
+        String query="select * from sct where sid = "+stid;
         try{
             Statement statement = con.createStatement();
             ResultSet resultSet =statement.executeQuery(query);
             try{
                 while(resultSet.next()){
-                    tname=resultSet.getString("tname");
-                    ObservableList<String> row = FXCollections.observableArrayList();
-                    for(int i=1 ; i<=resultSet.getMetaData().getColumnCount(); i++){
-                        row.add(resultSet.getString(i));
-                    }
+                    SCT row=new SCT(resultSet.getString("sid"),resultSet.getString("cid"),resultSet.getString("cname"),resultSet.getString("sname"),resultSet.getString("tid"),resultSet.getString("tname"),resultSet.getString("nb_credits"));
                     data.add(row);
-
                 }
                 tableStd.setItems(data);
+                tableStd.getColumns().addAll(tidCol,tnameCol);
+
             }catch (Exception e){
                 e.printStackTrace();
             }
@@ -111,45 +113,48 @@ public class Student {
         }catch (Exception e){
             e.printStackTrace();
         }
-
     }
+
+
     @FXML
     public void viewAllGradesS(ActionEvent event) throws IOException{
-        String sid=DataBaseConnection.ID;
+        String stid=DataBaseConnection.ID;
         tableStd.getItems().clear();
         tableStd.getColumns().clear();
-        TableColumn c1=new TableColumn("CID");
-        TableColumn c2=new TableColumn("Course Name");
-        TableColumn c3=new TableColumn("XID");
-        TableColumn c4=new TableColumn("XLabel");
-        TableColumn c5=new TableColumn("DateOn");
-        TableColumn c6=new TableColumn("MarkOn");
-        TableColumn c7=new TableColumn("Mark");
-        tableStd.getColumns().addAll(c1,c2,c3,c4,c5,c6,c7);
-        ObservableList<ObservableList> data= FXCollections.observableArrayList();
-        int cid,xid,markon;
-        double mark;
-        String cname,xlabel,date;
-        String query="select cid , cname,xid,xlabel,xdate,mark_on,mark from gradesStudents where sid = "+sid;
+
+        TableColumn cidCol=new TableColumn("cid");
+        TableColumn cnameCol=new TableColumn("Crs name");
+        TableColumn xidCol=new TableColumn("xid");
+        TableColumn xlabelCol=new TableColumn("Exam label");
+        TableColumn xdateCol=new TableColumn("Exam date");
+        TableColumn markonCol=new TableColumn("Mark on");
+        TableColumn markCol=new TableColumn("Mark");
+
+
+        cidCol.setCellValueFactory(new PropertyValueFactory<SCT,String>("cid"));
+        cnameCol.setCellValueFactory(new PropertyValueFactory<SCT,String>("cname"));
+        xidCol.setCellValueFactory(new PropertyValueFactory<SCT,String>("xid"));
+        xlabelCol.setCellValueFactory(new PropertyValueFactory<SCT,String>("xlabel"));
+        xdateCol.setCellValueFactory(new PropertyValueFactory<SCT,String>("xdate"));
+        markonCol.setCellValueFactory(new PropertyValueFactory<SCT,String>("mark_on"));
+        markCol.setCellValueFactory(new PropertyValueFactory<SCT,String>("mark"));
+
+        ObservableList<SCT> data= FXCollections.observableArrayList();
+
+        String query="select * from gradestudents where sid = "+stid;
         try{
             Statement statement = con.createStatement();
             ResultSet resultSet =statement.executeQuery(query);
             try{
                 while(resultSet.next()){
-                    cid=resultSet.getInt("cid");
-                    cname=resultSet.getString("cname");
-                    xid=resultSet.getInt("xid");
-                    xlabel=resultSet.getString("xlabel");
-                    markon=resultSet.getInt("mark_on");
-                    mark=resultSet.getDouble("mark");
-                    ObservableList<String> row = FXCollections.observableArrayList();
-                    for(int i=1 ; i<=resultSet.getMetaData().getColumnCount(); i++){
-                        row.add(resultSet.getString(i));
-                    }
-                    data.add(row);
 
+
+                        SCT row=new SCT(resultSet.getString("sid"),resultSet.getString("cid"),resultSet.getString("cname"),resultSet.getString("sname"),resultSet.getString("nb_credits"),resultSet.getString("xid"),resultSet.getString("xlabel"),resultSet.getString("xdate"),resultSet.getString("mark_on"),resultSet.getString("mark"));
+                    data.add(row);
                 }
                 tableStd.setItems(data);
+                tableStd.getColumns().addAll(cidCol,cnameCol,xdateCol,xidCol,xlabelCol,markCol,markonCol);
+
             }catch (Exception e){
                 e.printStackTrace();
             }

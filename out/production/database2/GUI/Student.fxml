@@ -30,7 +30,7 @@
                               <Button layoutY="182.0" mnemonicParsing="false" onAction="#RegistCourse" prefHeight="48.0" prefWidth="184.0" text="Register Course" />
                               <Button layoutY="69.0" mnemonicParsing="false" onAction="#viewTeacherS" prefHeight="48.0" prefWidth="184.0" text="View All Teachers" />
                               <Button layoutY="128.0" mnemonicParsing="false" onAction="#viewAllGradesS" prefHeight="48.0" prefWidth="184.0" text="View Grades" />
-                              <Button layoutY="14.0" mnemonicParsing="false" onAction="#viewCourseS" prefHeight="48.0" prefWidth="184.0" text="View All Course" />
+                              <Button layoutY="14.0" mnemonicParsing="false" onAction="#viewCourseS" prefHeight="48.0" prefWidth="184.0" text="View All Course"  />
                               <Button layoutY="297.0" mnemonicParsing="false" onAction="#ChangePass" prefHeight="48.0" prefWidth="184.0" text="Change Password" />
                            </children>
                         </AnchorPane>
