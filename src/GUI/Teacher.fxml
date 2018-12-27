@@ -3,13 +3,12 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.SplitPane?>
-<?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<SplitPane dividerPositions="0.13316582914572864" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="442.0" prefWidth="637.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Teacher">
+<SplitPane dividerPositions="0.13316582914572864" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="442.0" prefWidth="637.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Teacher">
   <items>
     <AnchorPane maxHeight="50.0" maxWidth="1.7976931348623157E308" prefHeight="50.0" prefWidth="160.0">
          <children>
@@ -23,18 +22,17 @@
         <items>
             <VBox maxHeight="1.7976931348623157E308" maxWidth="-Infinity" prefHeight="341.0" prefWidth="171.0" spacing="5.0">
                <children>
-                  <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="170.0" text="View Courses" />
-                  <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="170.0" text="View Students" />
-                  <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="170.0" text="View Exam" />
+                  <Button mnemonicParsing="false" onAction="#viewCourseT" prefHeight="50.0" prefWidth="170.0" text="View Courses" />
+                  <Button mnemonicParsing="false" onAction="#viewStudentT" prefHeight="50.0" prefWidth="170.0" text="View Students" />
+                  <Button mnemonicParsing="false" onAction="#viewExamT" prefHeight="50.0" prefWidth="170.0" text="View Exam" />
                   <Button mnemonicParsing="false" onAction="#ExamPage" prefHeight="50.0" prefWidth="170.0" text="Create Exam" />
                   <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="170.0" text="Fill Grades" />
-                  <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="170.0" text="View Grades" />
+
                </children>
             </VBox>
-            <TableView prefHeight="382.0" prefWidth="353.0">
+            <TableView fx:id="tableTch" prefHeight="382.0" prefWidth="353.0">
               <columns>
-                <TableColumn prefWidth="75.0" text="C1" />
-                <TableColumn prefWidth="75.0" text="C2" />
+
               </columns>
             </TableView>
         </items>

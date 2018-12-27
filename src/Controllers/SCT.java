@@ -15,6 +15,18 @@ private String xid,xlabel,xdate,mark_on,mark;//sid,sname,cid,cname
         this.nb_credits = nb_credits;
     }
 
+    public SCT(String sid, String cid, String cname, String sname, String tid, String xid, String xlabel, String xdate) {
+        this.sid = sid;
+        this.cid = cid;
+        this.cname = cname;
+        this.sname = sname;
+        this.tid = tid;
+        this.xid = xid;
+        this.xlabel = xlabel;
+        this.xdate = xdate;
+    }
+
+    //tid,sid,sname,cid,cname,xid,xlabel,xdate
     public SCT(String sid, String cid, String cname, String sname, String nb_credits, String xid, String xlabel, String xdate, String mark_on, String mark) {
         this.sid = sid;
         this.cid = cid;
