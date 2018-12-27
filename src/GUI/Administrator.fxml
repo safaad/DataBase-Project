@@ -6,16 +6,16 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="412.0" prefWidth="618.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Administrator">
+<AnchorPane prefHeight="412.0" prefWidth="618.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Administrator">
    <children>
       <Label alignment="CENTER" layoutX="194.0" layoutY="14.0" prefHeight="55.0" prefWidth="600.0" text="Administrator" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <font>
             <Font size="30.0" />
          </font>
       </Label>
-      <Button layoutX="26.0" layoutY="81.0" mnemonicParsing="false" onAction="#AddTeacher" prefHeight="55.0" prefWidth="150.0" text="Add / Edit Teacher" />
-      <Button layoutX="26.0" layoutY="175.0" mnemonicParsing="false" onAction="#AddStudent" prefHeight="55.0" prefWidth="150.0" text="Add / Edit Student" />
-      <Button layoutX="26.0" layoutY="266.0" mnemonicParsing="false" onAction="#AddCourse" prefHeight="55.0" prefWidth="150.0" text="Add / Edit Course" />
+      <Button layoutX="26.0" layoutY="54.0" mnemonicParsing="false" onAction="#AddTeacher" prefHeight="55.0" prefWidth="174.0" text="Add / Edit Teacher" />
+      <Button layoutX="26.0" layoutY="122.0" mnemonicParsing="false" onAction="#AddStudent" prefHeight="55.0" prefWidth="174.0" text="Add / Edit Student" />
+      <Button layoutX="26.0" layoutY="189.0" mnemonicParsing="false" onAction="#AddCourse" prefHeight="55.0" prefWidth="174.0" text="Add / Edit Course" />
       <Label layoutX="244.0" layoutY="81.0" prefHeight="28.0" prefWidth="150.0" text="Remove Course :">
          <font>
             <Font size="15.0" />
@@ -68,5 +68,6 @@
             <Font size="18.0" />
          </font>
       </Label>
+      <Button layoutX="26.0" layoutY="254.0" mnemonicParsing="false" onAction="#CoursePre" prefHeight="55.0" prefWidth="174.0" text="Add Course Prerequisite" />
    </children>
 </AnchorPane>

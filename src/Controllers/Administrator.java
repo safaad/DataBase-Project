@@ -154,5 +154,12 @@ public class Administrator {
             }
         }
     }
+    @FXML
+    public void CoursePre (ActionEvent event) throws Exception{
+        Parent root = FXMLLoader.load(getClass().getResource("../GUI/CoursePre.fxml"));
+        Stage S =new Stage();
+        S.setScene(new Scene(root));
+        S.show();
+    }
 
 }

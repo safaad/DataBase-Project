@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="281.0" prefWidth="465.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.CoursePre">
+   <children>
+      <Label layoutX="47.0" layoutY="95.0" text="Course ID: ">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="47.0" layoutY="145.0" text="Course ID Required :" />
+      <TextField fx:id="b1" layoutX="181.0" layoutY="91.0" />
+      <TextField fx:id="b2" layoutX="181.0" layoutY="140.0" />
+      <Button layoutX="278.0" layoutY="232.0" mnemonicParsing="false" onAction="#Submit" prefHeight="36.0" prefWidth="82.0" text="Submit" />
+      <Button layoutX="369.0" layoutY="232.0" mnemonicParsing="false" onAction="#Cancel" prefHeight="36.0" prefWidth="82.0" text="Cancel" />
+      <Label alignment="CENTER" layoutX="199.0" layoutY="14.0" prefHeight="45.0" prefWidth="465.0" text="Course Required" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="t1" layoutX="131.0" layoutY="56.0" text="Plz check the Info" textFill="RED" visible="false">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="t2" layoutX="84.0" layoutY="176.0" text="Course Successfully Add" textFill="#4000ff" visible="false">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
