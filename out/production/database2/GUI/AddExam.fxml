@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.AddExam">
+   <children>
+      <Label alignment="CENTER" layoutX="233.0" layoutY="45.0" prefHeight="51.0" prefWidth="600.0" text="Adding Exam" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="69.0" layoutY="79.0" text="Exam ID :">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="69.0" layoutY="145.0" text="Xlabel :" />
+      <Label layoutX="69.0" layoutY="183.0" text="Date :" />
+      <Label layoutX="68.0" layoutY="222.0" text="Mark :" />
+      <TextField fx:id="b1" layoutX="154.0" layoutY="75.0" prefHeight="19.0" prefWidth="172.0" />
+      <TextField fx:id="b2" layoutX="157.0" layoutY="140.0" />
+      <TextField fx:id="b3" layoutX="157.0" layoutY="178.0" />
+      <TextField fx:id="b4" layoutX="157.0" layoutY="217.0" />
+      <Button layoutX="492.0" layoutY="318.0" mnemonicParsing="false" onAction="#Back" prefHeight="38.0" prefWidth="82.0" text="Cancel">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="398.0" layoutY="318.0" mnemonicParsing="false" onAction="#update" prefHeight="38.0" prefWidth="82.0" text="Update">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="307.0" layoutY="318.0" mnemonicParsing="false" onAction="#insert" prefHeight="38.0" prefWidth="82.0" text="Add">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="369.0" layoutY="75.0" mnemonicParsing="false" onAction="#search" text="Search">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Label fx:id="t1" layoutX="157.0" layoutY="104.0" text="No Exam ID" textFill="#f80000" visible="false">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="t5" layoutX="80.0" layoutY="104.0" text="Check The Iformation" textFill="#fc0000" visible="false">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="t2" layoutX="307.0" layoutY="111.0" text="The Exam is successfully" textFill="#1f0afc" visible="false">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="t3" layoutX="404.0" layoutY="139.0" text="Created" textFill="#4b04ee" visible="false">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="t4" layoutX="401.0" layoutY="139.0" text="Updated" textFill="#2f05eb" visible="false">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

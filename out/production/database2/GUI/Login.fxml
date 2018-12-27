@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="328.0" prefWidth="467.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Login">
+    <children>
+        <TextField fx:id="b1" layoutX="140.0" layoutY="135.0" prefHeight="35.0" prefWidth="187.0" promptText="Username">
+            <font>
+                <Font size="14.0" />
+            </font></TextField>
+        <TextField fx:id="b2" accessibleRole="PASSWORD_FIELD" layoutX="140.0" layoutY="180.0" prefHeight="35.0" prefWidth="187.0" promptText="Password">
+            <font>
+                <Font size="14.0" />
+            </font></TextField>
+        <Button defaultButton="true" layoutX="140.0" layoutY="226.0" mnemonicParsing="false" onAction="#Login" prefHeight="35.0" prefWidth="187.0" text="login" />
+        <ImageView fitHeight="42.0" fitWidth="47.0" layoutX="83.0" layoutY="132.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../3.png" />
+            </image>
+        </ImageView>
+        <ImageView fitHeight="42.0" fitWidth="42.0" layoutX="83.0" layoutY="177.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../iconfinder_lock__safety__security__square_2541981.png" />
+            </image>
+        </ImageView>
+      <Label alignment="CENTER" layoutX="186.0" layoutY="20.0" prefHeight="106.0" prefWidth="467.0" text="Welcome To Our University" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <Label fx:id="t1" layoutX="72.0" layoutY="92.0" prefHeight="29.0" prefWidth="358.0" text="Invalid Username or Password" textFill="#f80000" visible="false">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>

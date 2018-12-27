@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="412.0" prefWidth="618.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Administrator">
+   <children>
+      <Label alignment="CENTER" layoutX="194.0" layoutY="14.0" prefHeight="55.0" prefWidth="600.0" text="Administrator" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <Button layoutX="26.0" layoutY="81.0" mnemonicParsing="false" onAction="#AddTeacher" prefHeight="55.0" prefWidth="150.0" text="Add / Edit Teacher" />
+      <Button layoutX="26.0" layoutY="175.0" mnemonicParsing="false" onAction="#AddStudent" prefHeight="55.0" prefWidth="150.0" text="Add / Edit Student" />
+      <Button layoutX="26.0" layoutY="266.0" mnemonicParsing="false" onAction="#AddCourse" prefHeight="55.0" prefWidth="150.0" text="Add / Edit Course" />
+      <Label layoutX="244.0" layoutY="81.0" prefHeight="28.0" prefWidth="150.0" text="Remove Course :">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="316.0" layoutY="115.0" prefHeight="19.0" prefWidth="75.0" text="course ID :" />
+      <TextField fx:id="b3" layoutX="405.0" layoutY="111.0" />
+      <Label layoutX="244.0" layoutY="175.0" prefHeight="17.0" prefWidth="150.0" text="Remove Teacher :">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="316.0" layoutY="197.0" prefHeight="19.0" prefWidth="75.0" text="Teacher ID:" />
+      <TextField fx:id="b2" layoutX="405.0" layoutY="193.0" />
+      <Label layoutX="244.0" layoutY="243.0" prefHeight="17.0" prefWidth="150.0" text="Remove Student :">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="316.0" layoutY="267.0" prefHeight="17.0" prefWidth="75.0" text="Student ID :" />
+      <TextField fx:id="b1" layoutX="405.0" layoutY="262.0" />
+      <Button layoutX="497.0" layoutY="356.0" mnemonicParsing="false" onAction="#submit" prefHeight="27.0" prefWidth="75.0" text="Submit" />
+      <Label fx:id="t1" layoutX="422.0" layoutY="84.0" prefHeight="23.0" prefWidth="133.0" text="NO COURSE ID" textFill="#ff0606" visible="false">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="t2" layoutX="336.0" layoutY="138.0" text="Course Successfully Removed" textFill="#5426f8" visible="false">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="t3" layoutX="407.0" layoutY="161.0" text="No Teacher ID" textFill="#f50000" visible="false">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="t4" layoutX="342.0" layoutY="222.0" text="Teacher Successfully Removed" textFill="#3109f8" visible="false">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="t5" layoutX="395.0" layoutY="231.0" text="NO STUDENT ID" textFill="#f20b0b" visible="false">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="t6" layoutX="302.0" layoutY="294.0" text="The Student Successfully Removed" textFill="#3102ff" visible="false">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

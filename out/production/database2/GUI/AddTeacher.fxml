@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.AddTeacher">
+   <children>
+      <Label alignment="CENTER" layoutX="182.0" layoutY="14.0" prefHeight="59.0" prefWidth="600.0" text="Adding Teachers" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="37.0" layoutY="70.0" prefHeight="30.0" prefWidth="113.0" text="Teacher ID :">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="37.0" layoutY="136.0" text="Teacher name :" />
+      <Label layoutX="39.0" layoutY="163.0" prefHeight="27.0" prefWidth="102.0" text="Birth Date : " />
+      <Label layoutX="37.0" layoutY="197.0" prefHeight="27.0" prefWidth="95.0" text="Phone :" />
+      <Label layoutX="37.0" layoutY="265.0" prefHeight="17.0" prefWidth="95.0" text="Address :" />
+      <Label layoutX="39.0" layoutY="227.0" prefHeight="27.0" prefWidth="102.0" text="Speciality :" />
+      <TextField fx:id="b1" layoutX="133.0" layoutY="72.0" prefHeight="30.0" prefWidth="172.0" />
+      <TextField fx:id="b2" layoutX="136.0" layoutY="131.0" />
+      <TextField fx:id="b3" layoutX="136.0" layoutY="163.0" promptText="2019-01-11" />
+      <TextField fx:id="b4" layoutX="136.0" layoutY="197.0" promptText="01275340" />
+      <TextField fx:id="b5" layoutX="136.0" layoutY="227.0" />
+      <TextArea fx:id="b6" layoutX="136.0" layoutY="265.0" prefHeight="81.0" prefWidth="167.0" />
+      <Button layoutX="402.0" layoutY="72.0" mnemonicParsing="false" onAction="#search" prefHeight="30.0" prefWidth="86.0" text="Search">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="507.0" layoutY="356.0" mnemonicParsing="false" onAction="#Back" prefHeight="30.0" prefWidth="73.0" text="Cancel" />
+      <Button layoutX="424.0" layoutY="356.0" mnemonicParsing="false" onAction="#update" prefHeight="30.0" prefWidth="73.0" text="Update" />
+      <Button id="add" layoutX="339.0" layoutY="356.0" mnemonicParsing="false" onAction="#insert" prefHeight="30.0" prefWidth="73.0" text="Add" />
+      <Label fx:id="t1" layoutX="65.0" layoutY="108.0" text="please check the value " textFill="#ee0404" visible="false">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="t2" layoutX="329.0" layoutY="125.0" text="The teacher is successfully" textFill="#631bff" visible="false">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="t3" layoutX="412.0" layoutY="155.0" text="Created" textFill="#7221ff" visible="false">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="t5" layoutX="132.0" layoutY="108.0" text="No teacher ID" textFill="#f21010" visible="false">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="t4" layoutX="408.0" layoutY="155.0" text="Updated" textFill="#1c08f5" visible="false">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

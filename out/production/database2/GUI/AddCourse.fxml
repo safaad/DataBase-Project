@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.AddCourse">
+   <children>
+      <Label alignment="CENTER" layoutX="210.0" layoutY="14.0" prefHeight="58.0" prefWidth="600.0" text="Add Course" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="53.0" layoutY="82.0" text="Course ID :">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="41.0" layoutY="141.0" text="Course Name :" />
+      <Label layoutX="63.0" layoutY="173.0" text="Creidets :" />
+      <TextField fx:id="b1" layoutX="140.0" layoutY="78.0" prefHeight="19.0" prefWidth="173.0" />
+      <TextField fx:id="b2" layoutX="138.0" layoutY="136.0" />
+      <TextField fx:id="b3" layoutX="138.0" layoutY="168.0" />
+      <Button layoutX="434.0" layoutY="78.0" mnemonicParsing="false" onAction="#search" prefHeight="27.0" prefWidth="79.0" text="Search">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="507.0" layoutY="307.0" mnemonicParsing="false" onAction="#Back" prefHeight="40.0" prefWidth="79.0" text="Cancel">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="416.0" layoutY="307.0" mnemonicParsing="false" onAction="#update" prefHeight="40.0" prefWidth="79.0" text="Update">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="326.0" layoutY="307.0" mnemonicParsing="false" onAction="#insert" prefHeight="40.0" prefWidth="79.0" text="Add">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Label fx:id="t1" layoutX="140.0" layoutY="113.0" text="No Course ID" textFill="RED" visible="false">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="t2" layoutX="344.0" layoutY="130.0" text="The Course is successfully" textFill="#541ef8" visible="false">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="t3" layoutX="422.0" layoutY="158.0" text="Added" textFill="#3507ff" visible="false">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="t4" layoutX="413.0" layoutY="158.0" text="Updated" textFill="#3b05ff" visible="false">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="t5" layoutX="118.0" layoutY="113.0" text="Plz check the Information" textFill="#ff0505" visible="false">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="56.0" layoutY="206.0" text="Teacher ID :" />
+      <TextField fx:id="b4" layoutX="138.0" layoutY="201.0" />
+   </children>
+</AnchorPane>
