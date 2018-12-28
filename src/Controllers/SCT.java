@@ -1,9 +1,11 @@
 package Controllers;
 
+import java.awt.*;
 import java.util.Observable;
 
 public class SCT extends Observable {
     private String sid,cid,cname,sname,tid,tname,nb_credits;
+    private TextField grades =null;
 private String xid,xlabel,xdate,mark_on,mark;//sid,sname,cid,cname
     public SCT(String sid, String cid, String cname, String sname, String tid, String tname, String nb_credits) {
         this.sid = sid;
@@ -131,7 +133,9 @@ private String xid,xlabel,xdate,mark_on,mark;//sid,sname,cid,cname
     public String getNb_credits() {
         return nb_credits;
     }
-
+    public TextField getGrades(){
+        return grades;
+    }
     public void setNb_credits(String nb_credits) {
         this.nb_credits = nb_credits;
     }

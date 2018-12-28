@@ -26,7 +26,7 @@
                   <Button mnemonicParsing="false" onAction="#viewStudentT" prefHeight="50.0" prefWidth="170.0" text="View Students" />
                   <Button mnemonicParsing="false" onAction="#viewExamT" prefHeight="50.0" prefWidth="170.0" text="View Exam" />
                   <Button mnemonicParsing="false" onAction="#ExamPage" prefHeight="50.0" prefWidth="170.0" text="Create Exam" />
-                  <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="170.0" text="Fill Grades" />
+                  <Button mnemonicParsing="false" onAction="#fillGrades" prefHeight="50.0" prefWidth="170.0" text="Fill Grades" />
 
                </children>
             </VBox>

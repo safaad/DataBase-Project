@@ -22,6 +22,8 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 
 public class Teacher {
+    private static String examid=null;
+    private static String courseid=null;
     Connection con = DataBaseConnection.getConnection();
     @FXML
     private TableView<SCT> tableTch;
@@ -150,6 +152,13 @@ public class Teacher {
         Parent root = FXMLLoader.load(getClass().getResource("../GUI/AddExam.fxml"));
         Stage S =(Stage)((Node) event.getSource()).getScene().getWindow();
         S.close();
+        S.setScene(new Scene(root));
+        S.show();
+    }
+    @FXML
+    public void fillGrades(ActionEvent event) throws IOException{
+        Parent root = FXMLLoader.load(getClass().getResource("../GUI/FillGrades.fxml"));
+        Stage S =new Stage();
         S.setScene(new Scene(root));
         S.show();
     }
