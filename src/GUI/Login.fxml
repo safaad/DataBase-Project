@@ -8,16 +8,17 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
+<?import javafx.scene.control.PasswordField?>
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="328.0" prefWidth="467.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Login">
     <children>
         <TextField fx:id="b1" layoutX="140.0" layoutY="135.0" prefHeight="35.0" prefWidth="187.0" promptText="Username">
             <font>
                 <Font size="14.0" />
             </font></TextField>
-        <TextField fx:id="b2" accessibleRole="PASSWORD_FIELD" layoutX="140.0" layoutY="180.0" prefHeight="35.0" prefWidth="187.0" promptText="Password">
+        <PasswordField fx:id="b2" accessibleRole="PASSWORD_FIELD" layoutX="140.0" layoutY="180.0" prefHeight="35.0" prefWidth="187.0" promptText="Password">
             <font>
                 <Font size="14.0" />
-            </font></TextField>
+            </font></PasswordField>
         <Button defaultButton="true" layoutX="140.0" layoutY="226.0" mnemonicParsing="false" onAction="#Login" prefHeight="35.0" prefWidth="187.0" text="login" />
         <ImageView fitHeight="42.0" fitWidth="47.0" layoutX="83.0" layoutY="132.0" pickOnBounds="true" preserveRatio="true">
             <image>
