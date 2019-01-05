@@ -44,10 +44,9 @@ public class Login {
         }
         if(i>9999 && i<19999){
             Statement statement;
-            try (Connection con = DataBaseConnection.getConnection()) {
-                statement = con.createStatement();
-            }
-            ResultSet resultSet = statement.executeQuery("select * from Teacher where TID="+b1.getText()+" AND PASS="+b2.getText());
+            Connection con = DataBaseConnection.getConnection() ;
+            statement = con.createStatement();
+            ResultSet resultSet = statement.executeQuery("select * from teacher where TID="+Integer.parseInt(b1.getText())+" AND PASS="+b2.getText());
             if(resultSet.next()==false){
                 t1.setVisible(true);
                 return;
