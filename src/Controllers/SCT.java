@@ -1,12 +1,25 @@
 package Controllers;
 
-import java.awt.*;
+
+import javafx.scene.control.TextField;
+
 import java.util.Observable;
 
 public class SCT extends Observable {
     private String sid,cid,cname,sname,tid,tname,nb_credits;
-    private TextField grades =null;
+    private TextField grades;
 private String xid,xlabel,xdate,mark_on,mark;//sid,sname,cid,cname
+    public SCT(String sid, String cid, String cname, String sname, String tid, String tname, String nb_credits,String grades,String bla) {
+        this.sid = sid;
+        this.cid = cid;
+        this.cname = cname;
+        this.sname = sname;
+        this.tid = tid;
+        this.tname = tname;
+        this.nb_credits = nb_credits;
+        this.grades =new TextField(grades);
+    }
+
     public SCT(String sid, String cid, String cname, String sname, String tid, String tname, String nb_credits) {
         this.sid = sid;
         this.cid = cid;
@@ -128,6 +141,13 @@ private String xid,xlabel,xdate,mark_on,mark;//sid,sname,cid,cname
 
     public void setTname(String tname) {
         this.tname = tname;
+    }
+
+    public SCT(String xid, String xlabel, String xdate, String mark_on) {
+        this.xid = xid;
+        this.xlabel = xlabel;
+        this.xdate = xdate;
+        this.mark_on = mark_on;
     }
 
     public String getNb_credits() {
