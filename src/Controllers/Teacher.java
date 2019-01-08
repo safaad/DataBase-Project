@@ -111,33 +111,32 @@ public class Teacher {
         String tchid= DataBaseConnection.ID;
         tableTch.getItems().clear();
         tableTch.getColumns().clear();
-        TableColumn cidCol=new TableColumn("Cid");
-        TableColumn cnameCol=new TableColumn("Crs Name");
         TableColumn xidCol=new TableColumn("Xid");
         TableColumn xlabelCol=new TableColumn("Exam Label");
         TableColumn dateCol=new TableColumn("Exam Date");
-        cidCol.setCellValueFactory(new PropertyValueFactory<SCT,String>("cid"));
+        TableColumn markCol=new TableColumn("Mark On");
+
         xidCol.setCellValueFactory(new PropertyValueFactory<SCT,String>("xid"));
 
-        cnameCol.setCellValueFactory(new PropertyValueFactory<SCT,String>("cname"));
+
         xlabelCol.setCellValueFactory(new PropertyValueFactory<SCT,String>("xlabel"));
         dateCol.setCellValueFactory(new PropertyValueFactory<SCT,String>("xdate"));
-
+        markCol.setCellValueFactory(new PropertyValueFactory<SCT,String>("mark_on"));
         ObservableList<SCT> data= FXCollections.observableArrayList();
         String cid,nb_credits;
-        String sname,sid,cname,tname;
-        String query="select * from teacherview where tid = "+tchid;
+        String xid,xlabel,xdate,mark_on;
+        String query="select * from exam ";
         try{
             Statement statement = con.createStatement();
             ResultSet resultSet =statement.executeQuery(query);
             try{
                 while(resultSet.next()){
 
-                    SCT row=new SCT(resultSet.getString("sid"),resultSet.getString("cid"),resultSet.getString("cname"),resultSet.getString("sname"),resultSet.getString("nb_credits"),resultSet.getString("xid"),resultSet.getString("xlabel"),resultSet.getString("xdate"),resultSet.getString("mark_on"),resultSet.getString("mark"));
+                    SCT row=new SCT(resultSet.getString("xid"),resultSet.getString("xlabel"),resultSet.getString("xdate"),resultSet.getString("mark_on"));
                     data.add(row);
                 }
                 tableTch.setItems(data);
-                tableTch.getColumns().addAll(cidCol,cnameCol,xidCol,xlabelCol,dateCol);
+                tableTch.getColumns().addAll(xidCol,xlabelCol,dateCol,markCol);
 
             }catch (Exception e){
                 e.printStackTrace();

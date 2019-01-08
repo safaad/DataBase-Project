@@ -7,7 +7,7 @@ select NOW();
 select sid , sname from dbproject.student where sid=stdid;
 set @crs_list="";
 call certificatecursor(stdid,@crs_list);
-select @crs_list;
+select crs_list;
 end $$
 delimiter;
 
@@ -33,7 +33,7 @@ end //
 delimiter ;
 
 
-
+call certificateStudent(20006);
 
 
  
