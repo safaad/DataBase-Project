@@ -6,25 +6,25 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="263.0" prefWidth="498.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.RegistCourse">
+<AnchorPane prefHeight="263.0" prefWidth="498.0" style="-fx-background-color: #ffe6e6;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.RegistCourse">
    <children>
-      <Label alignment="CENTER" layoutX="232.0" layoutY="14.0" prefHeight="49.0" prefWidth="498.0" text="Regist Course" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <Label alignment="CENTER" layoutX="232.0" layoutY="14.0" prefHeight="49.0" prefWidth="498.0" text="Register Course" textFill="MAROON" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <font>
             <Font size="24.0" />
          </font>
       </Label>
-      <Label layoutX="37.0" layoutY="123.0" text="Course ID To regist :">
+      <Label layoutX="32.0" layoutY="123.0" text="Course ID To register :" textFill="MAROON">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
       <TextField fx:id="b1" layoutX="173.0" layoutY="119.0" />
-      <Button layoutX="411.0" layoutY="204.0" mnemonicParsing="false" onAction="#Back" text="Cancel">
+      <Button layoutX="411.0" layoutY="204.0" mnemonicParsing="false" onAction="#Back" style="-fx-background-color: #800000;" text="Cancel" textFill="WHITE">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
-      <Button layoutX="330.0" layoutY="204.0" mnemonicParsing="false" onAction="#Submit" text="Submit">
+      <Button layoutX="330.0" layoutY="204.0" mnemonicParsing="false" onAction="#Submit" style="-fx-background-color: #800000;" text="Submit" textFill="WHITE">
          <font>
             <Font size="14.0" />
          </font>

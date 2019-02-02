@@ -6,19 +6,19 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="281.0" prefWidth="465.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.CoursePre">
+<AnchorPane prefHeight="281.0" prefWidth="465.0" style="-fx-background-color: #e6ffe6;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.CoursePre">
    <children>
-      <Label layoutX="47.0" layoutY="95.0" text="Course ID: ">
+      <Label layoutX="47.0" layoutY="95.0" text="Course ID: " textFill="#006622">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <Label layoutX="47.0" layoutY="145.0" text="Course ID Required :" />
+      <Label layoutX="47.0" layoutY="145.0" text="Course ID Required :" textFill="#006622" />
       <TextField fx:id="b1" layoutX="181.0" layoutY="91.0" />
       <TextField fx:id="b2" layoutX="181.0" layoutY="140.0" />
-      <Button layoutX="278.0" layoutY="232.0" mnemonicParsing="false" onAction="#Submit" prefHeight="36.0" prefWidth="82.0" text="Submit" />
-      <Button layoutX="369.0" layoutY="232.0" mnemonicParsing="false" onAction="#Cancel" prefHeight="36.0" prefWidth="82.0" text="Cancel" />
-      <Label alignment="CENTER" layoutX="199.0" layoutY="14.0" prefHeight="45.0" prefWidth="465.0" text="Course Required" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <Button layoutX="278.0" layoutY="232.0" mnemonicParsing="false" onAction="#Submit" prefHeight="36.0" prefWidth="82.0" style="-fx-background-color: #006622;" text="Submit" textFill="WHITE" />
+      <Button layoutX="369.0" layoutY="232.0" mnemonicParsing="false" onAction="#Cancel" prefHeight="36.0" prefWidth="82.0" style="-fx-background-color: #006622;" text="Cancel" textFill="WHITE" />
+      <Label alignment="CENTER" layoutX="199.0" layoutY="14.0" prefHeight="45.0" prefWidth="465.0" text="Course Required" textFill="#006622" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <font>
             <Font size="24.0" />
          </font>

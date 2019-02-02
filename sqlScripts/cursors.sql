@@ -5,35 +5,34 @@ create procedure certificateStudent(IN stdid int)
 begin
 select NOW();
 select sid , sname from dbproject.student where sid=stdid;
-set @crs_list="";
-call certificatecursor(stdid,@crs_list);
-select crs_list;
+call certificatecursor(stdid);
 end $$
 delimiter;
 
 delimiter //
-create procedure certificatecursor(IN stdid int,inout crs_list varchar(10000))
+create procedure certificatecursor(IN stdid int)
 begin
-DECLARE finished INTEGER DEFAULT 0;
-declare cid int;declare sid int;declare xid int;declare mark decimal;
+DECLARE finished INTEGER DEFAULT FALSE;
+DECLARE _crs_list TEXT DEFAULT '' ;
+DECLARE total_mark decimal default 0;
+declare _cid int;declare _sid int;declare _xid int;declare _mark decimal;
 declare crs_cursor cursor for select cid , xid , mark from dbproject.markregister where sid = stdid ;
 DECLARE CONTINUE HANDLER 
-FOR NOT FOUND SET finished = 1;
+FOR NOT FOUND SET finished = true;
 open crs_cursor;
-get_courses:LOOP
-fetch crs_cursor into cid , xid, mark;
-if finished=1 then
-leave get_courses;
-end if;
+REPEAT
+fetch crs_cursor into _cid , _xid, _mark;
+if not finished then
 # build list
-set crs_list=concat(cid,"\t",xid,"\t",mark,"\n",crs_list);
-end loop get_courses;
+set total_mark = total_mark + _mark;
+set _crs_list=concat(_crs_list,'\r\n',_cid,char(10),_xid,char(10),_mark);
+end if;
+until finished end REPEAT;
 close crs_cursor;
+set _crs_list=concat(_crs_list,'\r\n','TOTAL',char(10),total_mark);
+select _crs_list;
 end //
 delimiter ;
 
-
+use dbproject;
 call certificateStudent(20006);
-
-
- 

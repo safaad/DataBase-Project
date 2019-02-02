@@ -7,15 +7,15 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="470.0" prefWidth="670.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Student">
+<AnchorPane prefHeight="470.0" prefWidth="670.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Student">
    <children>
       <SplitPane dividerPositions="0.11702127659574468" layoutX="27.0" layoutY="94.0" orientation="VERTICAL" prefHeight="472.0" prefWidth="671.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <items>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="105.0" prefWidth="669.0">
                <children>
-                  <Label alignment="CENTER" layoutX="309.0" layoutY="17.0" prefHeight="51.0" prefWidth="668.0" text="Student" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <Label alignment="CENTER" layoutX="309.0" layoutY="17.0" prefHeight="51.0" prefWidth="668.0" style="-fx-background-color: #ffe6e6;" text="Student" textFill="MAROON" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <font>
-                        <Font size="30.0" />
+                        <Font name="Times New Roman Bold" size="36.0" />
                      </font>
                   </Label>
                </children>
@@ -24,19 +24,18 @@
                <children>
                   <SplitPane dividerPositions="0.2818590704647676" layoutX="134.0" layoutY="-122.0" prefHeight="369.0" prefWidth="669.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                     <items>
-                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ffe6e6;">
                            <children>
-                              <Button layoutY="239.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="184.0" text="Certificate" />
-                              <Button layoutY="182.0" mnemonicParsing="false" onAction="#RegistCourse" prefHeight="48.0" prefWidth="184.0" text="Register Course" />
-                              <Button layoutY="69.0" mnemonicParsing="false" onAction="#viewTeacherS" prefHeight="48.0" prefWidth="184.0" text="View All Teachers" />
-                              <Button layoutY="128.0" mnemonicParsing="false" onAction="#viewAllGradesS" prefHeight="48.0" prefWidth="184.0" text="View Grades" />
-                              <Button layoutY="14.0" mnemonicParsing="false" onAction="#viewCourseS" prefHeight="48.0" prefWidth="184.0" text="View All Course"  />
-                              <Button layoutY="297.0" mnemonicParsing="false" onAction="#ChangePass" prefHeight="48.0" prefWidth="184.0" text="Change Password" />
+                              <Button layoutY="178.0" mnemonicParsing="false" onAction="#RegistCourse" prefHeight="48.0" prefWidth="184.0" style="-fx-background-color: #800000;" text="Register Course" textFill="WHITE" />
+                              <Button layoutY="59.0" mnemonicParsing="false" onAction="#viewTeacherS" prefHeight="48.0" prefWidth="184.0" style="-fx-background-color: #800000;" text="View All Teachers" textFill="WHITE" />
+                              <Button layoutY="117.0" mnemonicParsing="false" onAction="#viewAllGradesS" prefHeight="48.0" prefWidth="184.0" style="-fx-background-color: #800000;" text="View Grades" textFill="WHITE" />
+                              <Button mnemonicParsing="false" onAction="#viewCourseS" prefHeight="48.0" prefWidth="184.0" style="-fx-background-color: #800000;" text="View All Course" textFill="WHITE" />
+                              <Button layoutY="238.0" mnemonicParsing="false" onAction="#ChangePass" prefHeight="48.0" prefWidth="184.0" style="-fx-background-color: #800000;" text="Change Password" textFill="WHITE" />
                            </children>
                         </AnchorPane>
                         <AnchorPane prefHeight="412.0" prefWidth="410.0">
                            <children>
-                              <TableView id="Studenttable" fx:id="tableStd" layoutX="8.0" prefHeight="412.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                              <TableView id="Studenttable" fx:id="tableStd" layoutX="8.0" prefHeight="412.0" prefWidth="200.0" style="-fx-background-color: #ffe6e6;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                            </children>
                         </AnchorPane>
                     </items>

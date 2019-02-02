@@ -8,29 +8,29 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<SplitPane dividerPositions="0.13316582914572864" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="442.0" prefWidth="637.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Teacher">
+<SplitPane dividerPositions="0.13316582914572864" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="442.0" prefWidth="637.0" style="-fx-background-color: #000066;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Teacher">
   <items>
     <AnchorPane maxHeight="50.0" maxWidth="1.7976931348623157E308" prefHeight="50.0" prefWidth="160.0">
          <children>
-            <Label alignment="CENTER" layoutX="256.0" layoutY="16.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="598.0" text="Teacher" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <Label alignment="CENTER" layoutX="256.0" layoutY="16.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="598.0" style="-fx-background-color: #e6e6ff;" text="Teacher" textFill="#000066" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <font>
-                  <Font size="30.0" />
+                  <Font name="Times New Roman Bold" size="36.0" />
                </font>
             </Label>
          </children></AnchorPane>
-      <SplitPane dividerPositions="0.29264214046822745" maxHeight="1.7976931348623157E308" prefHeight="352.0" prefWidth="668.0">
+      <SplitPane dividerPositions="0.29264214046822745" maxHeight="1.7976931348623157E308" prefHeight="352.0" prefWidth="668.0" style="-fx-background-color: #000066;">
         <items>
-            <VBox maxHeight="1.7976931348623157E308" maxWidth="-Infinity" prefHeight="341.0" prefWidth="171.0" spacing="5.0">
+            <VBox maxHeight="1.7976931348623157E308" maxWidth="-Infinity" prefHeight="341.0" prefWidth="171.0" spacing="5.0" style="-fx-background-color: #e6e6ff;">
                <children>
-                  <Button mnemonicParsing="false" onAction="#viewCourseT" prefHeight="50.0" prefWidth="170.0" text="View Courses" />
-                  <Button mnemonicParsing="false" onAction="#viewStudentT" prefHeight="50.0" prefWidth="170.0" text="View Students" />
-                  <Button mnemonicParsing="false" onAction="#viewExamT" prefHeight="50.0" prefWidth="170.0" text="View Exam" />
-                  <Button mnemonicParsing="false" onAction="#ExamPage" prefHeight="50.0" prefWidth="170.0" text="Create Exam" />
-                  <Button mnemonicParsing="false" onAction="#fillGrades" prefHeight="50.0" prefWidth="170.0" text="Fill Grades" />
+                  <Button mnemonicParsing="false" onAction="#viewCourseT" prefHeight="50.0" prefWidth="170.0" style="-fx-background-color: #000066;" text="View Courses" textFill="WHITE" />
+                  <Button mnemonicParsing="false" onAction="#viewStudentT" prefHeight="50.0" prefWidth="170.0" style="-fx-background-color: #000066;" text="View Students" textFill="WHITE" />
+                  <Button mnemonicParsing="false" onAction="#viewExamT" prefHeight="50.0" prefWidth="170.0" style="-fx-background-color: #000066;" text="View Exam" textFill="WHITE" />
+                  <Button mnemonicParsing="false" onAction="#ExamPage" prefHeight="50.0" prefWidth="170.0" style="-fx-background-color: #000066;" text="Create Exam" textFill="WHITE" />
+                  <Button mnemonicParsing="false" onAction="#fillGrades" prefHeight="50.0" prefWidth="170.0" style="-fx-background-color: #000066;" text="Fill Grades" textFill="WHITE" />
 
                </children>
             </VBox>
-            <TableView fx:id="tableTch" prefHeight="382.0" prefWidth="353.0">
+            <TableView fx:id="tableTch" prefHeight="382.0" prefWidth="353.0" style="-fx-background-color: #e6e6ff;">
               <columns>
 
               </columns>

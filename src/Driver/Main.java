@@ -23,7 +23,7 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("../GUI/Login.fxml"));
-        primaryStage.setTitle("Hello World");
+        primaryStage.setTitle("DataBase Application");
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
     }

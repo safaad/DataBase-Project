@@ -6,16 +6,16 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="412.0" prefWidth="618.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Administrator">
+<AnchorPane prefHeight="412.0" prefWidth="618.0" style="-fx-background-color: #e6ffe6;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Administrator">
    <children>
-      <Label alignment="CENTER" layoutX="194.0" layoutY="14.0" prefHeight="55.0" prefWidth="600.0" text="Administrator" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <Label alignment="CENTER" layoutX="194.0" layoutY="14.0" prefHeight="55.0" prefWidth="600.0" text="Administrator" textFill="#006622" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <font>
-            <Font size="30.0" />
+            <Font name="Times New Roman Bold" size="33.0" />
          </font>
       </Label>
-      <Button layoutX="26.0" layoutY="54.0" mnemonicParsing="false" onAction="#AddTeacher" prefHeight="55.0" prefWidth="174.0" text="Add / Edit Teacher" />
-      <Button layoutX="26.0" layoutY="122.0" mnemonicParsing="false" onAction="#AddStudent" prefHeight="55.0" prefWidth="174.0" text="Add / Edit Student" />
-      <Button layoutX="26.0" layoutY="189.0" mnemonicParsing="false" onAction="#AddCourse" prefHeight="55.0" prefWidth="174.0" text="Add / Edit Course" />
+      <Button layoutX="26.0" layoutY="54.0" mnemonicParsing="false" onAction="#AddTeacher" prefHeight="55.0" prefWidth="174.0" style="-fx-background-color: #006622;" text="Add / Edit Teacher" textFill="WHITE" />
+      <Button layoutX="26.0" layoutY="122.0" mnemonicParsing="false" onAction="#AddStudent" prefHeight="55.0" prefWidth="174.0" style="-fx-background-color: #006622;" text="Add / Edit Student" textFill="WHITE" />
+      <Button layoutX="26.0" layoutY="189.0" mnemonicParsing="false" onAction="#AddCourse" prefHeight="55.0" prefWidth="174.0" style="-fx-background-color: #006622;" text="Add / Edit Course" textFill="WHITE" />
       <Label layoutX="244.0" layoutY="81.0" prefHeight="28.0" prefWidth="150.0" text="Remove Course :">
          <font>
             <Font size="15.0" />
@@ -37,7 +37,7 @@
       </Label>
       <Label layoutX="316.0" layoutY="267.0" prefHeight="17.0" prefWidth="75.0" text="Student ID :" />
       <TextField fx:id="b1" layoutX="405.0" layoutY="262.0" />
-      <Button layoutX="497.0" layoutY="356.0" mnemonicParsing="false" onAction="#submit" prefHeight="27.0" prefWidth="75.0" text="Submit" />
+      <Button layoutX="497.0" layoutY="356.0" mnemonicParsing="false" onAction="#submit" prefHeight="27.0" prefWidth="75.0" style="-fx-background-color: #006622;" text="Submit" textFill="WHITE" />
       <Label fx:id="t1" layoutX="422.0" layoutY="84.0" prefHeight="23.0" prefWidth="133.0" text="NO COURSE ID" textFill="#ff0606" visible="false">
          <font>
             <Font size="18.0" />
@@ -68,6 +68,6 @@
             <Font size="18.0" />
          </font>
       </Label>
-      <Button layoutX="26.0" layoutY="254.0" mnemonicParsing="false" onAction="#CoursePre" prefHeight="55.0" prefWidth="174.0" text="Add Course Prerequisite" />
+      <Button layoutX="26.0" layoutY="254.0" mnemonicParsing="false" onAction="#CoursePre" prefHeight="55.0" prefWidth="174.0" style="-fx-background-color: #006622;" text="Add Course Prerequisite" textFill="WHITE" />
    </children>
 </AnchorPane>

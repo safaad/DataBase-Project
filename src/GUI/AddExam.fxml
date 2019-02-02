@@ -6,41 +6,41 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.AddExam">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #e6e6ff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.AddExam">
    <children>
-      <Label alignment="CENTER" layoutX="233.0" layoutY="45.0" prefHeight="51.0" prefWidth="600.0" text="Adding Exam" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <Label alignment="CENTER" layoutX="233.0" layoutY="45.0" prefHeight="51.0" prefWidth="600.0" text="Adding Exam" textFill="#000066" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <font>
             <Font size="30.0" />
          </font>
       </Label>
-      <Label layoutX="69.0" layoutY="79.0" text="Exam ID :">
+      <Label layoutX="69.0" layoutY="79.0" text="Exam ID :" textFill="#000066">
          <font>
             <Font size="15.0" />
          </font>
       </Label>
-      <Label layoutX="69.0" layoutY="145.0" text="Xlabel :" />
-      <Label layoutX="69.0" layoutY="183.0" text="Date :" />
-      <Label layoutX="68.0" layoutY="222.0" text="Mark :" />
+      <Label layoutX="69.0" layoutY="145.0" text="Xlabel :" textFill="#000066" />
+      <Label layoutX="69.0" layoutY="183.0" text="Date :" textFill="#000066" />
+      <Label layoutX="68.0" layoutY="222.0" text="Mark :" textFill="#000066" />
       <TextField fx:id="b1" layoutX="154.0" layoutY="75.0" prefHeight="19.0" prefWidth="172.0" />
       <TextField fx:id="b2" layoutX="157.0" layoutY="140.0" />
       <TextField fx:id="b3" layoutX="157.0" layoutY="178.0" />
       <TextField fx:id="b4" layoutX="157.0" layoutY="217.0" />
-      <Button layoutX="492.0" layoutY="318.0" mnemonicParsing="false" onAction="#Back" prefHeight="38.0" prefWidth="82.0" text="Cancel">
+      <Button layoutX="492.0" layoutY="318.0" mnemonicParsing="false" onAction="#Back" prefHeight="38.0" prefWidth="82.0" style="-fx-background-color: #000066;" text="Cancel" textFill="WHITE">
          <font>
             <Font size="15.0" />
          </font>
       </Button>
-      <Button layoutX="398.0" layoutY="318.0" mnemonicParsing="false" onAction="#update" prefHeight="38.0" prefWidth="82.0" text="Update">
+      <Button layoutX="398.0" layoutY="318.0" mnemonicParsing="false" onAction="#update" prefHeight="38.0" prefWidth="82.0" style="-fx-background-color: #000066;" text="Update" textFill="WHITE">
          <font>
             <Font size="15.0" />
          </font>
       </Button>
-      <Button layoutX="307.0" layoutY="318.0" mnemonicParsing="false" onAction="#insert" prefHeight="38.0" prefWidth="82.0" text="Add">
+      <Button layoutX="307.0" layoutY="318.0" mnemonicParsing="false" onAction="#insert" prefHeight="38.0" prefWidth="82.0" style="-fx-background-color: #000066;" text="Add" textFill="WHITE">
          <font>
             <Font size="15.0" />
          </font>
       </Button>
-      <Button layoutX="369.0" layoutY="75.0" mnemonicParsing="false" onAction="#search" text="Search">
+      <Button layoutX="369.0" layoutY="75.0" mnemonicParsing="false" onAction="#search" style="-fx-background-color: #000066;" text="Search" textFill="WHITE">
          <font>
             <Font size="15.0" />
          </font>
