@@ -9,7 +9,13 @@ public class SCT extends Observable {
     private String sid,cid,cname,sname,tid,tname,nb_credits;
     private TextField grades;
 private String xid,xlabel,xdate,mark_on,mark;//sid,sname,cid,cname
-    public SCT(String sid, String cid, String cname, String sname, String tid, String tname, String nb_credits,String grades,String bla) {
+    public SCT(String cid, String cname, String nb_credits) {
+        this.cid = cid;
+        this.cname = cname;
+        this.nb_credits = nb_credits;
+    }
+
+    public SCT(String sid, String cid, String cname, String sname, String tid, String tname, String nb_credits, String grades, String bla) {
         this.sid = sid;
         this.cid = cid;
         this.cname = cname;

@@ -44,14 +44,14 @@ public class Teacher {
         ObservableList<SCT> data= FXCollections.observableArrayList();
         String cid,nb_credits;
         String sname,sid,cname,tname;
-        String query="select * from sct where tid = "+tchid;
+        String query="select * from course where tid = "+tchid;
         try{
             Statement statement = con.createStatement();
             ResultSet resultSet =statement.executeQuery(query);
             try{
                 while(resultSet.next()){
 
-                    SCT row=new SCT(resultSet.getString("sid"),resultSet.getString("cid"),resultSet.getString("cname"),resultSet.getString("sname"),resultSet.getString("tid"),resultSet.getString("tname"),resultSet.getString("nb_credits"));
+                    SCT row=new SCT(resultSet.getString("cid"),resultSet.getString("cname"),resultSet.getString("nb_credits"));
                     data.add(row);
                 }
                 tableTch.setItems(data);

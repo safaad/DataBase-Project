@@ -41,6 +41,7 @@ public class FillGrades {
             try {
                 statement1=con.createStatement();
                 statement = con.createStatement();
+                Statement stat2=con.createStatement();
                 ResultSet resultSet =statement.executeQuery(query);
                 ResultSet res=statement1.executeQuery(query2);
                 data.clear();
@@ -49,6 +50,7 @@ public class FillGrades {
                     text1.setVisible(true);
                 }
                 else{
+                    resultSet.beforeFirst();
                     tableGrades.getItems().clear();
                     tableGrades.getColumns().clear();
                     TableColumn sidCol=new TableColumn("sid");
@@ -61,10 +63,12 @@ public class FillGrades {
 
                     try{
                         while(resultSet.next()){
-
-                            SCT row=new SCT(resultSet.getString("sid"),resultSet.getString("cid"),resultSet.getString("cname"),resultSet.getString("sname"),resultSet.getString("tid"),resultSet.getString("tname"),resultSet.getString("nb_credits"),"","");
-
-                            data.add(row);
+                            String sid;
+                            SCT row=new SCT(sid=resultSet.getString("sid"),resultSet.getString("cid"),resultSet.getString("cname"),resultSet.getString("sname"),resultSet.getString("tid"),resultSet.getString("tname"),resultSet.getString("nb_credits"),"","");
+                            String q2="select * from markregister where xid ='"+xid.getText()+"' and cid = '"+cid.getText()+"' and sid ='"+sid+"'";
+                            ResultSet set=stat2.executeQuery(q2);
+                            if(!set.next())
+                                data.add(row);
                         }
                         tableGrades.setItems(data);
                         tableGrades.getColumns().addAll(sidCol,snameCol,gradeCol);
@@ -85,6 +89,8 @@ public class FillGrades {
         if(cid.getText().isEmpty() || xid.getText().isEmpty()){
             text2.setVisible(true);
         }else{
+            text2.setVisible(false);
+            text1.setVisible(false);
             x=xid.getText();
             c=cid.getText();
             for(SCT row:data){
