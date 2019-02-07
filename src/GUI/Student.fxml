@@ -4,27 +4,34 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="470.0" prefWidth="670.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Student">
+<AnchorPane prefHeight="470.0" prefWidth="670.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Student">
    <children>
       <SplitPane dividerPositions="0.11702127659574468" layoutX="27.0" layoutY="94.0" orientation="VERTICAL" prefHeight="472.0" prefWidth="671.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <items>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="105.0" prefWidth="669.0">
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="105.0" prefWidth="669.0" SplitPane.resizableWithParent="false">
                <children>
                   <Label alignment="CENTER" layoutX="309.0" layoutY="17.0" prefHeight="51.0" prefWidth="668.0" style="-fx-background-color: #ffe6e6;" text="Student" textFill="MAROON" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <font>
                         <Font name="Times New Roman Bold" size="36.0" />
                      </font>
                   </Label>
+                  <ImageView fitHeight="32.0" fitWidth="43.0" layoutX="622.0" layoutY="10.0" onMouseClicked="#logout" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="5.0">
+                     <image>
+                        <Image url="@../../pics/logout1.png" />
+                     </image>
+                  </ImageView>
                </children>
             </AnchorPane>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="364.0" prefWidth="669.0">
                <children>
                   <SplitPane dividerPositions="0.2818590704647676" layoutX="134.0" layoutY="-122.0" prefHeight="369.0" prefWidth="669.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                     <items>
-                        <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ffe6e6;">
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ffe6e6;" SplitPane.resizableWithParent="false">
                            <children>
                               <Button layoutY="178.0" mnemonicParsing="false" onAction="#RegistCourse" prefHeight="48.0" prefWidth="184.0" style="-fx-background-color: #800000;" text="Register Course" textFill="WHITE" />
                               <Button layoutY="59.0" mnemonicParsing="false" onAction="#viewTeacherS" prefHeight="48.0" prefWidth="184.0" style="-fx-background-color: #800000;" text="View All Teachers" textFill="WHITE" />

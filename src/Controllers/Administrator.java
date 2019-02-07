@@ -8,6 +8,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import javafx.event.ActionEvent;
 import java.io.IOException;
@@ -158,6 +159,14 @@ public class Administrator {
     public void CoursePre (ActionEvent event) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("../GUI/CoursePre.fxml"));
         Stage S =new Stage();
+        S.setScene(new Scene(root));
+        S.show();
+    }
+
+
+    public void logout(MouseEvent mouseEvent) throws Exception {
+        Parent root = FXMLLoader.load(getClass().getResource("../GUI/Login.fxml"));
+        Stage S =(Stage)((Node) mouseEvent.getSource()).getScene().getWindow();
         S.setScene(new Scene(root));
         S.show();
     }

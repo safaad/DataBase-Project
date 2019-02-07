@@ -12,6 +12,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import javafx.event.ActionEvent;
 
@@ -172,4 +173,10 @@ public class Teacher {
         S.show();
     }
 
+    public void logout(MouseEvent mouseEvent) throws Exception {
+        Parent root = FXMLLoader.load(getClass().getResource("../GUI/Login.fxml"));
+        Stage S =(Stage)((Node) mouseEvent.getSource()).getScene().getWindow();
+        S.setScene(new Scene(root));
+        S.show();
+    }
 }
