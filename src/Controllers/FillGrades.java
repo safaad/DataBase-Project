@@ -82,7 +82,7 @@ public class FillGrades {
         }
         }
     }
-
+    
     public void submitGrade(javafx.event.ActionEvent event) {
         String x,c,s,g;
 
