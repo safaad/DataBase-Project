@@ -162,4 +162,14 @@ public class Teacher {
         S.show();
     }
 
+    @FXML
+    public void ChangePass (ActionEvent event) throws IOException {
+        FXMLLoader fxmlLoader =new FXMLLoader(getClass().getResource("../GUI/ChangePasswordT.fxml"));
+        Parent root1 = fxmlLoader.load();
+        Stage S = new Stage();
+        S.setScene(new Scene(root1));
+        S.setTitle("Change Password");
+        S.show();
+    }
+
 }
