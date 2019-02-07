@@ -108,6 +108,10 @@ public class AddCourse {
         t3.setVisible(true);
         t4.setVisible(false);
         t5.setVisible(false);
+        b1.clear();
+        b2.clear();
+        b3.clear();
+        b4.clear();
     }
 
     @FXML
@@ -138,6 +142,7 @@ public class AddCourse {
         t2.setVisible(false);
         t3.setVisible(false);
         t4.setVisible(false);
+
     }
 
     @FXML
@@ -158,5 +163,9 @@ public class AddCourse {
         t4.setVisible(true);
         t3.setVisible(false);
         t5.setVisible(false);
+        b1.clear();
+        b2.clear();
+        b3.clear();
+        b4.clear();
     }
 }

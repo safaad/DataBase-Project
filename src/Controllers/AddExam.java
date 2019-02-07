@@ -107,6 +107,10 @@ public class AddExam {
         t4.setVisible(true);
         t3.setVisible(false);
         t5.setVisible(false);
+        b1.clear();
+        b2.clear();
+        b3.clear();
+        b4.clear();
     }
 
     @FXML
@@ -157,5 +161,9 @@ public class AddExam {
         t3.setVisible(true);
         t4.setVisible(false);
         t5.setVisible(false);
+        b1.clear();
+        b2.clear();
+        b3.clear();
+        b4.clear();
     }
 }

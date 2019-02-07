@@ -49,24 +49,32 @@ public class AddTeacher {
             t1.setVisible(true);
             t2.setVisible(false);
             t3.setVisible(false);
+            t4.setVisible(false);
+            t5.setVisible(false);
             return;
         }
         if(b3.getText().charAt(4)!='-' || b3.getText().charAt(7)!='-'){
             t1.setVisible(true);
             t2.setVisible(false);
             t3.setVisible(false);
+            t4.setVisible(false);
+            t5.setVisible(false);
             return;
         }
         if(b4.getText().length()!=8){
             t1.setVisible(true);
             t2.setVisible(false);
             t3.setVisible(false);
+            t4.setVisible(false);
+            t5.setVisible(false);
             return;
         }
         if(!b1.getText().isEmpty()){
             t1.setVisible(true);
             t2.setVisible(false);
             t3.setVisible(false);
+            t4.setVisible(false);
+            t5.setVisible(false);
             return;
         }
         String query = " insert into TEACHER (TNAME, BDATE, PHONE, SPECIALITY,ADDRESS) values ('"+b2.getText()+"','"+b3.getText()+"','"+b4.getText()+"','"+b5.getText()+"','"+b6.getText()+"')";
@@ -75,18 +83,36 @@ public class AddTeacher {
         t1.setVisible(false);
         t2.setVisible(true);
         t3.setVisible(true);
+        t4.setVisible(false);
+        t5.setVisible(false);
+        b1.clear();
+        b2.clear();
+        b3.clear();
+        b4.clear();
+        b5.clear();
+        b6.clear();
     }
 
     @FXML
     public void search(ActionEvent event) throws Exception{
         if(b1.getText().isEmpty()){
             t5.setVisible(true);
+            t4.setVisible(false);
+            t1.setVisible(false);
+            t3.setVisible(false);
+            t2.setVisible(false);
             return;
         }
         Statement statement = con.createStatement();
         ResultSet resultSet = statement.executeQuery("select * from Teacher where TID="+Integer.parseInt(b1.getText()));
-        if(resultSet.next()==false)
+        if(resultSet.next()==false) {
             t5.setVisible(true);
+            t4.setVisible(false);
+            t1.setVisible(false);
+            t3.setVisible(false);
+            t2.setVisible(false);
+        }
+
         b2.setText(resultSet.getString("Tname"));
         b3.setText(resultSet.getString("BDate"));
         b4.setText(resultSet.getString("PHONE"));
@@ -101,6 +127,8 @@ public class AddTeacher {
             t1.setVisible(true);
             t2.setVisible(false);
             t4.setVisible(false);
+            t3.setVisible(false);
+            t5.setVisible(false);
             return;
         }
         String query = " update Teacher set Tname='"+b2.getText()+"',BDate='"+b3.getText()+"',phone='"+b4.getText()+"',address='"+b6.getText()+"' ,SPECIALITY='"+b5.getText()+"'  where TID="+b1.getText();
@@ -109,5 +137,7 @@ public class AddTeacher {
         t1.setVisible(false);
         t2.setVisible(true);
         t4.setVisible(true);
+        t4.setVisible(false);
+        t5.setVisible(false);
     }
 }

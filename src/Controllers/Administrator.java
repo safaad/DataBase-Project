@@ -63,6 +63,10 @@ public class Administrator {
         if(b1.getText().isEmpty()){
             t5.setVisible(true);
             t6.setVisible(false);
+            t1.setVisible(false);
+            t2.setVisible(false);
+            t3.setVisible(false);
+            t4.setVisible(false);
         }
         else {
             Statement statement = con.createStatement();
@@ -70,6 +74,10 @@ public class Administrator {
             if(resultSet.next()==false){
                 t5.setVisible(true);
                 t6.setVisible(false);
+                t1.setVisible(false);
+                t2.setVisible(false);
+                t3.setVisible(false);
+                t4.setVisible(false);
             }
             else{
                 String query = " DELETE FROM Student WHERE SID ="+b1.getText();
@@ -83,11 +91,19 @@ public class Administrator {
                 preparedStmt.execute();
                 t5.setVisible(false);
                 t6.setVisible(true);
+                t1.setVisible(false);
+                t2.setVisible(false);
+                t3.setVisible(false);
+                t4.setVisible(false);
             }
         }
         if(b2.getText().isEmpty()){
             t3.setVisible(true);
             t4.setVisible(false);
+            t1.setVisible(false);
+            t2.setVisible(false);
+            t5.setVisible(false);
+            t6.setVisible(false);
         }
         else{
             Statement statement = con.createStatement();
@@ -95,6 +111,10 @@ public class Administrator {
             if(resultSet.next()==false){
                 t3.setVisible(true);
                 t4.setVisible(false);
+                t1.setVisible(false);
+                t2.setVisible(false);
+                t5.setVisible(false);
+                t6.setVisible(false);
             }
             else {
                 String query = " DELETE FROM Teacher WHERE TID ="+b2.getText();
@@ -121,11 +141,19 @@ public class Administrator {
                 preparedStmt.execute();
                 t3.setVisible(false);
                 t4.setVisible(true);
+                t1.setVisible(false);
+                t2.setVisible(false);
+                t5.setVisible(false);
+                t6.setVisible(false);
             }
         }
         if(b3.getText().isEmpty()){
             t1.setVisible(true);
             t2.setVisible(false);
+            t3.setVisible(false);
+            t4.setVisible(false);
+            t5.setVisible(false);
+            t6.setVisible(false);
         }
         else {
             Statement statement = con.createStatement();
@@ -133,6 +161,10 @@ public class Administrator {
             if(resultSet.next()==false){
                 t1.setVisible(true);
                 t2.setVisible(false);
+                t3.setVisible(false);
+                t4.setVisible(false);
+                t5.setVisible(false);
+                t6.setVisible(false);
             }
             else {
                 String query = " DELETE FROM Course WHERE TID ="+b3.getText();
@@ -152,6 +184,10 @@ public class Administrator {
                 preparedStmt.execute();
                 t1.setVisible(false);
                 t2.setVisible(true);
+                t3.setVisible(false);
+                t4.setVisible(false);
+                t5.setVisible(false);
+                t6.setVisible(false);
             }
         }
     }
