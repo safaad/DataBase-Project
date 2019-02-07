@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="412.0" prefWidth="618.0" style="-fx-background-color: #e6ffe6;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Administrator">
+<AnchorPane prefHeight="412.0" prefWidth="618.0" style="-fx-background-color: #e6ffe6;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Administrator">
    <children>
       <Label alignment="CENTER" layoutX="194.0" layoutY="14.0" prefHeight="55.0" prefWidth="600.0" text="Administrator" textFill="#006622" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <font>
@@ -73,7 +73,7 @@
       <Button layoutX="26.0" layoutY="254.0" mnemonicParsing="false" onAction="#CoursePre" prefHeight="55.0" prefWidth="174.0" style="-fx-background-color: #006622;" text="Add Course Prerequisite" textFill="WHITE" />
       <ImageView fitHeight="29.0" fitWidth="31.0" layoutX="580.0" layoutY="13.0" onMouseClicked="#logout" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="9.0" AnchorPane.topAnchor="9.0">
          <image>
-            <Image url="@../../pics/logout2.png" />
+            <Image url="@../pics/logout2.png" />
          </image>
       </ImageView>
    </children>

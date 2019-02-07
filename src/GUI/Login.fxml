@@ -16,7 +16,7 @@
           <children>
             <ImageView fitHeight="310.0" fitWidth="480.0" opacity="0.7" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../pics/uni.jpg" />
+                  <Image url="@../pics/uni.jpg" />
                </image>
             </ImageView>
               <TextField fx:id="b1" layoutX="140.0" layoutY="135.0" prefHeight="35.0" prefWidth="187.0" promptText="Username">

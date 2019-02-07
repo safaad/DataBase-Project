@@ -22,7 +22,7 @@
                   </Label>
                   <ImageView fitHeight="32.0" fitWidth="43.0" layoutX="622.0" layoutY="10.0" onMouseClicked="#logout" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="5.0">
                      <image>
-                        <Image url="@../../pics/logout1.png" />
+                        <Image url="@../pics/logout1.png" />
                      </image>
                   </ImageView>
                </children>
