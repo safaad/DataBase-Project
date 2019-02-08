@@ -151,7 +151,7 @@ public class Student {
                 while(resultSet.next()){
 
 
-                        SCT row=new SCT(resultSet.getString("sid"),resultSet.getString("cid"),resultSet.getString("cname"),resultSet.getString("sname"),resultSet.getString("nb_credits"),resultSet.getString("xid"),resultSet.getString("xlabel"),resultSet.getString("xdate"),resultSet.getString("mark_on"),resultSet.getString("mark"));
+                        SCT row=new SCT(resultSet.getString("sid"),resultSet.getString("cid"),resultSet.getString("cname"),resultSet.getString("sname"),"",resultSet.getString("xid"),resultSet.getString("xlabel"),resultSet.getString("xdate"),resultSet.getString("mark_on"),resultSet.getString("mark"));
                     data.add(row);
                 }
                 tableStd.setItems(data);

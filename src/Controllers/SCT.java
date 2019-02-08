@@ -47,7 +47,7 @@ private String xid,xlabel,xdate,mark_on,mark;//sid,sname,cid,cname
         this.xdate = xdate;
     }
 
-    //tid,sid,sname,cid,cname,xid,xlabel,xdate
+
     public SCT(String sid, String cid, String cname, String sname, String nb_credits, String xid, String xlabel, String xdate, String mark_on, String mark) {
         this.sid = sid;
         this.cid = cid;

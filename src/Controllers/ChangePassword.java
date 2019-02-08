@@ -8,6 +8,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
@@ -29,8 +30,8 @@ public class ChangePassword {
     }
 
     @FXML public TextField b1;
-    @FXML public TextField b2;
-    @FXML public TextField b3;
+    @FXML public PasswordField b2;
+    @FXML public PasswordField b3;
     @FXML public Label t1;
 
     @FXML

@@ -25,8 +25,10 @@ public class FillGrades {
     @FXML
     private TextField cid,xid;
     @FXML
+    Button btnsubmit,bt1;
+    @FXML
     private Text text1,text2,text3;
-
+    private int mark_on;
     @FXML
     public void searchGrade(ActionEvent event) throws IOException{
         String tid=DataBaseConnection.ID;
@@ -50,6 +52,7 @@ public class FillGrades {
                     text1.setVisible(true);
                 }
                 else{
+                    int mark_on= Integer.parseInt(res.getString("mark_on"));
                     resultSet.beforeFirst();
                     tableGrades.getItems().clear();
                     tableGrades.getColumns().clear();
@@ -94,7 +97,7 @@ public class FillGrades {
             x=xid.getText();
             c=cid.getText();
             for(SCT row:data){
-                if(row.getGrades().getText().isEmpty())
+                if(row.getGrades().getText().isEmpty() || (Integer.parseInt(row.getGrades().getText()) > mark_on))
                     text2.setVisible(true);
             }
             if(text2.isVisible())
@@ -113,6 +116,8 @@ public class FillGrades {
                     }
 
                 }
+                bt1.setDisable(true);
+                btnsubmit.setDisable(true);
                 text3.setVisible(true);
             }
 
